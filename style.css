@@ -13,7 +13,6 @@ header {
   position: sticky;
   min-height: 5rem;
   background: linear-gradient(to right, #081b29, #000a0e);
-
   font-size: 2rem;
   opacity: 1;
   text-align: right;
@@ -52,15 +51,19 @@ body {
 
 .home-content {
   padding: 50px;
+  margin-bottom: 50px;
+  margin-left: 10px;
 }
 
 .home-content:hover {
-  cursor: pointer;
-  color: rgb(3, 3, 35);
+  color: #fff;
+  transition: color 0.3s ease;
+  text-shadow: 5px 0 5px #c084fc;
 }
 
-.home-section h1 {
-  font-size: 2.5rem;
+
+.home-section h3 {
+  font-size: 3.5rem;
 }
 
 .home-section p {
@@ -73,7 +76,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
   margin: 5px auto;
-  /* centers the image horizontally */
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
@@ -119,9 +121,17 @@ body {
   margin: auto;
 }
 
-.about-me h1 {
-  font-size: 2.5rem;
+h1 {
+  font-size: 3.5rem;
   color: #ffffff;
+  width: 100%;
+  font-size: 3rem;
+  font-weight: 800;
+
+}
+
+h2 {
+  font-size: 3.5rem;
 }
 
 .highlights {
@@ -129,14 +139,22 @@ body {
   font-size: 1.6rem;
   color: #c084fc;
 }
-.skills-section{
-   min-height: 100vh;
+
+.highlights:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+  text-shadow: 0 0 5px #c084fc;
+}
+
+.skills-section {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.skills-section-content{
- padding: 100px 100px;
+
+.skills-section-content {
+  padding: 100px 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,34 +162,45 @@ body {
   flex-wrap: wrap;
   gap: 35px;
   min-height: 100vh;
- background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #0d9ec7;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
-.skills-section-content img{
-  max-width: 120px;
+
+.skills-section-content img {
+  max-width: 110px;
 }
-.icon{
-  font-weight: 700;
- font-size: 2rem;
- padding: 25px;
-   backdrop-filter: blur(10px);
+
+.skills-section h1 {
+  text-align: center;
+}
+
+.skill-icon {
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+
+}
+
+.icon {
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 25px;
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
-  border-radius: 10px; 
+  border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.08);
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.489),
     0 0 15px rgba(255, 0, 255, 0.32),
     0 0 5px rgba(255, 255, 255, 0.562);
   text-shadow: 10px 9px 8px rgba(0, 0, 0, 0.443);
-  color: rgba(255, 255, 255, 0.75);
+
 }
-.skills-section h1{
-  width: 100%;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 30px;
-}
+
 
 @keyframes wave-animation {
   0% {
@@ -208,11 +237,13 @@ body {
 }
 
 .typing-text {
-  width: 20ch;
+  width: 21ch;
   white-space: nowrap;
   overflow: hidden;
+  color: #097fed;
+  font-size: 2.4rem;
   border-right: 2px solid #fff;
-  animation: typing 3s steps(22), blink .75s step-end infinite;
+  animation: typing 2s steps(18, end), blink .5s step-end 3;
 }
 
 @keyframes typing {
@@ -221,12 +252,106 @@ body {
   }
 
   to {
-    width: 22ch;
+    width: 20ch;
   }
 }
 
 @keyframes blink {
   50% {
     border-color: transparent;
+  }
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-slide-up {
+  opacity: 0;
+  animation: fadeSlideUp 2.5s ease-out forwards;
+}
+
+@media(max-width:700px) {
+  header {
+    min-height: 5rem;
+    padding: 5px 10px;
+    z-index: 1000;
+  }
+
+  .navigation a {
+    font-size: 1.1rem;
+    /* Adjust to smaller size */
+  }
+
+  .navigation ul {
+    gap: 10px;
+    /* Reduce spacing between nav items */
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .home-section {}
+
+  .image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 5px auto;
+    object-fit: cover;
+  }
+
+  .image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .typing-text {
+    width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #097fed;
+    font-size: 1.4rem;
+    border-right: 2px solid #fff;
+    animation: typing 2s steps(18, end), blink .5s step-end 3;
+  }
+
+  .about-me {
+    max-width: 500px;
+    padding: 5px;
+    font-size: 1rem;
+    margin: 0px 10px;
+  }
+
+  .skills-section-content img {
+    max-width: 100px;
+  }
+
+  .skills-section-content {
+    padding: 20px 20px;
+  }
+
+  .skills-section h1 {
+    font-size: 1.9rem;
+  }
+
+  .icon {
+    max-width: 110px;
+    font-size: 1rem;
+    padding: 4px;
   }
 }
