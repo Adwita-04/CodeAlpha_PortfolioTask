@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+
+}
+
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding-top: 6rem; slightly more than header height */
+}
+
+header {
+  position: sticky;
+  min-height: 5rem;
+  background: linear-gradient(to right, #081b29, #000a0e);
+
+  font-size: 2rem;
+  opacity: 1;
+  text-align: right;
+  padding: 15px 40px;
+  z-index: 1000;
+
+}
+
+body {
+  background: linear-gradient(to right, #081b29, #0c3c45, #000a0ed5);
+
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 1.9rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.home-section {
+  padding: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  min-height: 100vh;
+}
+
+.home-content {
+  padding: 50px;
+}
+
+.home-content:hover {
+  cursor: pointer;
+  color: rgb(3, 3, 35);
+}
+
+.home-section h1 {
+  font-size: 2.5rem;
+}
+
+.home-section p {
+  font-size: 1.1rem;
+}
+
+.image {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 5px auto;
+  /* centers the image horizontally */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%;
+  /* Adjusts the rotation point to look like hand is waving */
+  font-size: 2.2rem;
+}
+
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.about-me {
+  max-width: 700px;
+  padding: 30px;
+  border: 2px solid rgb(23, 1, 1);
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  /* soft glass effect */
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.489),
+    0 0 15px rgba(255, 0, 255, 0.32),
+    0 0 5px rgba(255, 255, 255, 0.562);
+  text-shadow: 10px 9px 8px rgba(0, 0, 0, 0.438);
+  margin: auto;
+}
+
+.about-me h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.highlights {
+  font-weight: 1000;
+  font-size: 1.6rem;
+  color: #c084fc;
+}
+.skills-section{
+   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills-section-content{
+ padding: 100px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
+  min-height: 100vh;
+ background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+.skills-section-content img{
+  max-width: 120px;
+}
+.icon{
+  font-weight: 700;
+ font-size: 2rem;
+ padding: 25px;
+   backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 10px; 
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.489),
+    0 0 15px rgba(255, 0, 255, 0.32),
+    0 0 5px rgba(255, 255, 255, 0.562);
+  text-shadow: 10px 9px 8px rgba(0, 0, 0, 0.443);
+  color: rgba(255, 255, 255, 0.75);
+}
+.skills-section h1{
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg);
+  }
+
+  10% {
+    transform: rotate(14.0deg);
+  }
+
+  20% {
+    transform: rotate(-8.0deg);
+  }
+
+  30% {
+    transform: rotate(14.0deg);
+  }
+
+  40% {
+    transform: rotate(-4.0deg);
+  }
+
+  50% {
+    transform: rotate(10.0deg);
+  }
+
+  60% {
+    transform: rotate(0.0deg);
+  }
+
+  100% {
+    transform: rotate(0.0deg);
+  }
+}
+
+.typing-text {
+  width: 20ch;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation: typing 3s steps(22), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 22ch;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
