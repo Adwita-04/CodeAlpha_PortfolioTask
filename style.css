@@ -3,11 +3,13 @@
   margin: 0;
 
 }
-
-html {
-  scroll-behavior: smooth;
-  /* scroll-padding-top: 6rem; slightly more than header height */
+:root{
+  --bg-color:#081b29;
+  --second-bg-color:#112e42;
+  --text-color:#ededed;
+  --main-color:#00abf0;
 }
+
 
 header {
   position: sticky;
@@ -22,7 +24,7 @@ header {
 }
 
 body {
-  background: linear-gradient(to right, #081b29, #0c3c45, #000a0ed5);
+  background: linear-gradient(to right,#081b29, #112e42,#000a0ed5 );
 
 }
 
@@ -39,20 +41,18 @@ body {
   font-weight: bold;
   transition: color 0.3s ease;
 }
-
-.home-section {
-  padding: 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
+section{
   min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+.home-section {
+  display: flex;
+  align-items: center;
+  padding: 0 9%;
 }
 
 .home-content {
-  padding: 50px;
-  margin-bottom: 50px;
-  margin-left: 10px;
+  max-width: 60rem;
 }
 
 .home-content:hover {
@@ -62,12 +62,57 @@ body {
 }
 
 
-.home-section h3 {
-  font-size: 3.5rem;
+.home-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-.home-section p {
-  font-size: 1.1rem;
+.home-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 4rem;
+  color: white;
+}
+
+.contact-icon{
+  position: absolute;
+  bottom: 3.5rem;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-icon a{
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  border-radius: 100%;
+  border: 2px solid var(--main-color);
+  font-size: 2rem;
+  color:var(--main-color);
+  z-index: 1;
+  overflow: hidden;
+  text-decoration: none;
+}
+.contact-icon a::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:0;
+  height: 100px;
+  background: var(--main-color);
+  z-index: -1;
+  transition:.5s ;
+}
+.contact-icon a:hover{
+color: var(--bg-color);
+}
+.contact-icon a:hover::before{
+  width: 100%;
 }
 
 .image {
@@ -90,24 +135,24 @@ body {
   animation: wave-animation 2s infinite;
   transform-origin: 70% 70%;
   /* Adjusts the rotation point to look like hand is waving */
-  font-size: 2.2rem;
+  font-size: 4.5rem;
 }
 
 .about-section {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+ 
 }
-
+.about-me .wave{
+font-size: 2rem;
+}
 .about-me {
   max-width: 700px;
   padding: 30px;
   border: 2px solid rgb(23, 1, 1);
   font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.08);
+  background:rgba(28, 47, 116, 0.251);
   /* soft glass effect */
   color: #fff;
   backdrop-filter: blur(10px);
@@ -115,10 +160,12 @@ body {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.489),
-    0 0 15px rgba(255, 0, 255, 0.32),
-    0 0 5px rgba(255, 255, 255, 0.562);
-  text-shadow: 10px 9px 8px rgba(0, 0, 0, 0.438);
+    0 0 19px rgba(255, 0, 255, 0.32),
+    0 0 7px rgba(255, 255, 255, 0.562);
   margin: auto;
+}
+.about-me p,.about-me h1{
+  text-shadow: 5px 5px 8px rgb(0, 0, 0);
 }
 
 h1 {
@@ -129,15 +176,10 @@ h1 {
   font-weight: 800;
 
 }
-
-h2 {
-  font-size: 3.5rem;
-}
-
 .highlights {
   font-weight: 1000;
-  font-size: 1.6rem;
-  color: #c084fc;
+  font-size: 1.8rem;
+  color: var(--main-color);
 }
 
 .highlights:hover {
@@ -235,13 +277,19 @@ h2 {
     transform: rotate(0.0deg);
   }
 }
+.home-content .typing-text{
+  position: relative;
+  width:2.1rem;
+}
 
 .typing-text {
   width: 21ch;
   white-space: nowrap;
   overflow: hidden;
-  color: #097fed;
-  font-size: 2.4rem;
+ -webkit-text-stroke: .7px var(--main-color);
+  font-size: 3.1rem;
+  font-weight: 700;
+  color: transparent;
   border-right: 2px solid #fff;
   animation: typing 2s steps(18, end), blink .5s step-end 3;
 }
@@ -304,7 +352,7 @@ h2 {
     font-size: 1rem;
   }
 
-  .home-section {}
+  
 
   .image {
     width: 250px;
