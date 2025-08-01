@@ -3,27 +3,32 @@
   margin: 0;
 
 }
+
 body {
-  background: linear-gradient(to right,#081b29, #112e42,#000a0ed5 );
+  background: linear-gradient(to right, #081b29, #112e42, #000a0ed5);
 }
 
 /* Common styling */
-:root{
-  --bg-color:#081b29;
-  --main-color:#00abf0;
+:root {
+  --bg-color: #081b29;
+  --main-color: #00abf0;
   --gradient-skill: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
+
 html {
   scroll-behavior: smooth;
 }
-section{
+
+section {
   min-height: 100vh;
   padding: 10rem 2rem;
 }
-a{
+
+a {
   text-decoration: none;
   color: #0f6eaded;
 }
+
 h1 {
   font-size: 4rem;
   color: #ffffff;
@@ -42,20 +47,23 @@ header {
   z-index: 10000;
   width: 100%;
 }
+
 .navigation ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
   gap: 30px;
 }
+
 .navigation a {
   font-size: 2.1rem;
   font-weight: 700;
   transition: color 0.3s ease;
 }
+
 .logo {
   font-size: 1.5rem;
-   -webkit-text-stroke: .7px var(--main-color);
+  -webkit-text-stroke: .7px var(--main-color);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -65,69 +73,76 @@ header {
   align-items: center;
   padding: 0 9%;
 }
+
 .home-content {
   max-width: 70rem;
 }
+
 .home-section h1 {
   font-weight: 700;
   line-height: 1.3;
   color: #fff;
   text-shadow: 3px 0 10px #c084fc;
 }
+
 .home-content p {
   max-width: 30rem;
   font-size: 1.4rem;
   margin: 2rem 0 4rem 0;
   color: #fff;
-   text-shadow: 3px 0 10px #c084fc;
+  text-shadow: 3px 0 10px #c084fc;
 }
 
 /* Resume button design */
 button {
   position: relative;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  background:transparent;
+  background: transparent;
   color: var(--main-color);
   border: 2px solid var(--main-color);
   border-radius: 10px;
   cursor: pointer;
   margin-top: -30px;
   width: 15rem;
-  height:3rem;
+  height: 3rem;
   font-size: 1.5rem;
   font-weight: 600;
   z-index: 1;
   overflow: hidden;
 }
-button::before{
+
+button::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
-  height:100%;
- z-index: -1; 
- transition: .6s;
- background: var(--main-color);
+  height: 100%;
+  z-index: -1;
+  transition: .6s;
+  background: var(--main-color);
 }
-button:hover{
+
+button:hover {
   color: var(--bg-color);
 }
+
 button:hover::before {
   width: 100%;
 }
 
 /* Contact icons design */
-.contact-icon{
+.contact-icon {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.15rem;
   width: 170px;
   display: flex;
   justify-content: space-between;
 }
-.contact-icon a{
+
+.contact-icon a {
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -138,26 +153,29 @@ button:hover::before {
   border-radius: 100%;
   border: 2px solid var(--main-color);
   font-size: 2rem;
-  color:var(--main-color);
+  color: var(--main-color);
   z-index: 1;
   overflow: hidden;
   text-decoration: none;
 }
-.contact-icon a::before{
+
+.contact-icon a::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width:0;
+  width: 0;
   height: 100px;
   background: var(--main-color);
   z-index: -1;
-  transition:.6s ;
+  transition: .6s;
 }
-.contact-icon a:hover{
-color: var(--bg-color);
+
+.contact-icon a:hover {
+  color: var(--bg-color);
 }
-.contact-icon a:hover::before{
+
+.contact-icon a:hover::before {
   width: 100%;
 }
 
@@ -170,9 +188,10 @@ color: var(--bg-color);
   box-shadow: 0 0 15px rgb(248, 131, 48);
   object-fit: cover;
   overflow: hidden;
- animation: shineEffect 2s infinite;
+  animation: shineEffect 2s infinite;
 }
-.image img{
+
+.image img {
   width: 100%;
   height: 100%;
 }
@@ -192,15 +211,17 @@ color: var(--bg-color);
   justify-content: center;
   align-items: center;
 }
-.about-me .wave{
-font-size: 2rem;
+
+.about-me .wave {
+  font-size: 2rem;
 }
+
 .about-me {
   max-width: 700px;
   padding: 30px;
   border: 2px solid rgb(23, 1, 1);
   font-size: 1.5rem;
-  background:rgba(28, 47, 116, 0.251);
+  background: rgba(28, 47, 116, 0.251);
   color: #fff;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -219,6 +240,7 @@ font-size: 2rem;
   font-size: 1.8rem;
   color: var(--main-color);
 }
+
 .highlights:hover {
   color: #fff;
   transition: color 0.3s ease;
@@ -236,14 +258,17 @@ font-size: 2rem;
   gap: 25px;
   height: inherit;
   color: rgb(205, 208, 255);
-  background:var(--gradient-skill);
+  background: var(--gradient-skill);
 }
+
 .skills-section-content img {
   max-width: 100px;
 }
+
 .skills-section h1 {
   text-align: center;
 }
+
 .icon {
   font-weight: 600;
   font-size: 2rem;
@@ -259,125 +284,129 @@ font-size: 2rem;
   text-shadow: 10px 9px 8px rgba(0, 0, 0, 0.443);
   overflow: hidden;
 }
+
 .icon:hover {
   transform: scale(1.2);
   transition: transform 0.5s ease;
   cursor: pointer;
 }
 
-.icon::before{
+.icon::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
-  height:100%;
- z-index: -1; 
- transition: .6s;
- background: var(--gradient-skill);
+  height: 100%;
+  z-index: -1;
+  transition: .6s;
+  background: var(--gradient-skill);
 }
+
 .icon:hover::before {
   width: 100%;
 }
+
 /* Projects section styling */
-.heading{
+.heading {
   text-align: center;
+  margin-top: -90px;
+  margin-bottom: 20px;
 }
+
 .projects-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 800px;
+  display: grid;
+  gap: 30px;
   margin: auto;
-  text-align: center;
-}
-.projects-container h3{
-  font-size: 1.8rem;
-}
-.projects-container a{
-  color:var(--main-color);
-}
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #081b29;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .project-card {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-  background:var(--gradient-skill);
-  border-radius: 12px;
+  background: var(--gradient-skill);
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  margin: 30px;
+  max-width: 350px;
+  transition: transform 0.3s ease;
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 .project-card img {
-  max-width: 200px;
-  border-radius: 10px;
-}
-
-.project-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.project-info h3 {
-  color: white;
-  text-shadow: 10px 5px 8px rgb(0, 0, 0);
-}
-
-.project-info p {
-  margin: 10px 0;
-}
-
-.project-links .btn {
-  text-decoration: none;
-  padding: 10px 15px;
-  margin-right: 10px;
+  width: 100%;
+  max-width: 350px;
+  object-fit: cover;
   border-radius: 8px;
-  background-color: #081b29;
-  color: white;
-  transition: 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
-.project-links .btn:hover {
-  background-color: #006fbe;
+
+.project-card h3 {
+  margin-top: 15px;
+  font-size: 1.6rem;
+  color: white;
+  text-decoration: underline;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  line-height: 1.2rem;
+  margin: 10px 0 35px;
+  color: #c5c6c7;
+}
+
+.project-card a {
+  text-decoration: none;
+  padding: 2px 60px 0px 10px;
+  border-radius: 5px;
+  background-color: #081b29;
+  color: #fff;
+  transition: 0.2s ease;
+  gap: 30px;
+}
+
+.project-card a:hover {
+  background-color: #0e3c5d;
 }
 
 /* Animations (wave, typing, fade) */
-.home-content .typing-text{
+.home-content .typing-text {
   position: relative;
   white-space: nowrap;
   overflow: hidden;
- -webkit-text-stroke: .7px var(--main-color);
+  -webkit-text-stroke: .7px var(--main-color);
   font-size: 2.5rem;
   font-weight: 700;
   color: transparent;
   border-right: 2px solid #fff;
   animation: typing 2s steps(18, end) infinite alternate,
-             blink 0.6s step-end infinite; 
+    blink 0.6s step-end infinite;
 }
+
 .fade-slide-up {
   opacity: 0;
   animation: fadeSlideUp 2.5s ease-out forwards;
 }
-  @keyframes shineEffect{
- 0% {
+
+@keyframes shineEffect {
+  0% {
     box-shadow: 0 0 10px #00bfff;
   }
+
   50% {
     box-shadow: 0 0 30px #4169e1;
   }
+
   100% {
     box-shadow: 0 0 12px #1a1aff86;
   }
 }
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0.0deg);
@@ -411,24 +440,29 @@ font-size: 2rem;
     transform: rotate(0.0deg);
   }
 }
+
 @keyframes typing {
   from {
     width: 0;
   }
+
   to {
     width: 19ch;
   }
 }
+
 @keyframes blink {
   50% {
     border-color: transparent;
   }
 }
+
 @keyframes fadeSlideUp {
   0% {
     opacity: 0;
     transform: translateY(40px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -441,32 +475,41 @@ font-size: 2rem;
     min-height: 3.5rem;
     padding: 5px 10px;
   }
+
   .navigation a {
     font-size: 1.8rem;
   }
+
   .navigation ul {
     gap: 10px;
   }
+
   h1 {
     font-size: 3.8rem !important;
   }
-   h2 {
+
+  h2 {
     font-size: 1.7rem !important;
   }
-  button{
+
+  button {
     height: 2rem;
-    width:10rem;
+    width: 10rem;
     font-size: 1rem;
   }
-  .download-btn{
+
+  .download-btn {
     font-size: 0.8rem;
   }
-  .home-content p{
+
+  .home-content p {
     margin-top: -5px;
   }
-  .highlights{
+
+  .highlights {
     font-size: 1.3rem;
   }
+
   .image {
     width: 250px;
     height: 250px;
@@ -475,136 +518,198 @@ font-size: 2rem;
     margin: 5px auto;
     object-fit: cover;
   }
+
   .image img {
     width: 100%;
     height: 100%;
   }
+
   .about-me {
     max-width: 500px;
     padding: 5px;
     font-size: 1rem;
     margin: 0px 10px;
   }
+
   .skills-section-content img {
     max-width: 100px;
   }
+
   .skills-section-content {
     padding: 20px 20px;
   }
+
   .skills-section h1 {
     font-size: 1.9rem;
   }
+
   .icon {
     max-width: 110px;
     font-size: 1rem;
     padding: 4px;
   }
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 90%;
+    box-sizing: border-box;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .project-info p {
+    font-size: 1.2rem;
+  }
+
+  .project-card a {
+    padding: 2px 30px 0px 10px;
+    font-size: 0.7rem;
+  }
 }
-@media (max-width:480px){
+
+@media (max-width:490px) {
   header {
     min-height: 3rem;
     padding: 4px 8px;
   }
+
   .navigation a {
     font-size: 1.2rem;
   }
+
   .navigation ul {
     gap: 10px;
   }
-h1{
-  font-size: 2.4rem !important;
-}
-h2{
-  font-size: 1.2rem !important;
-}
-h3{
-  font-size: 1rem !important;
-}
-button{
-  height: 1.5rem;
-}
-.wave{
-  font-size:2.3rem !important;
-}
-.image{
-  height: 200px;
-  width: 200px;
-}
-.home-content p{
-  margin-top: 5px;
-  font-size: 1rem;
-}
-.contact-icon {
-    width: 140px;
+
+  h1 {
+    font-size: 2.4rem !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  button {
+    height: 1.5rem;
+  }
+
+  .wave {
+    font-size: 2.3rem !important;
+  }
+
+  .image {
+    height: 200px;
+    width: 200px;
+  }
+
+  .home-content p {
+    margin-top: 5px;
+    font-size: 1rem;
+  }
+
+  .contact-icon {
+    width: 130px;
     bottom: 1rem;
     gap: 5px;
   }
+
   .contact-icon a {
     width: 35px;
     height: 35px;
     font-size: 1.2rem;
   }
-.icon {
+
+  .icon {
     max-width: 95px;
     font-size: 0.8rem;
     padding: 4px;
   }
-  .icon img{
+
+  .icon img {
     width: 100%;
   }
 }
+
 @media (max-width: 340px) {
- header {
+  header {
     min-height: 2rem;
   }
+
   .navigation a {
     font-size: 0.9rem;
   }
+
   .navigation ul {
     gap: 8px;
   }
-h1{
-  font-size: 2rem !important;
-}
-h2{
-  font-size: 1rem !important;
-}
-h3{
-  font-size: 0.9rem !important;
-}
-button{
-  height: 1.2rem;
-  width: 8rem;
-  font-size: 0.8rem;
-}
-.image{
-  height: 150px;
-  width: 150px;
-}
-.home-content p{
-  margin-top: 5px;
-  font-size: 0.8rem;
-}
-.about-me .wave{
-  font-size: 0.9rem !important;
-}
-.highlights{
-  font-size: 0.9rem;
-}
-.icon {
+
+  h1 {
+    font-size: 2rem !important;
+  }
+
+  h2 {
+    font-size: 0.9rem !important;
+  }
+
+  h3 {
+    font-size: 0.9rem !important;
+  }
+
+  button {
+    height: 1.2rem;
+    width: 8rem;
+    font-size: 0.8rem;
+  }
+
+  .image {
+    height: 150px;
+    width: 150px;
+  }
+
+  .home-content p {
+    margin-top: 5px;
+    font-size: 0.8rem;
+  }
+
+  .about-me .wave {
+    font-size: 0.9rem !important;
+  }
+
+  .highlights {
+    font-size: 0.9rem;
+  }
+
+  .icon {
     max-width: 70px;
   }
+
   .contact-icon {
     width: 120px;
     bottom: 0.5rem;
     gap: 4px;
   }
+
   .contact-icon a {
     width: 30px;
     height: 30px;
     font-size: 1rem;
   }
-  .download-btn{
+
+  .download-btn {
     font-size: 0.5rem;
   }
 }
