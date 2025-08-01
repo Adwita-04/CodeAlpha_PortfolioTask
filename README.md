@@ -34,14 +34,6 @@ CSS3
 JavaScript
 Netlify (for deployment)
 
-📌 Setup Instructions
-bash
-Copy
-Edit
-# Clone the repository
-git clone https://github.com/Adwita-04/portfolio-task.git
-
-# Open index.html in your browser
 🙋‍♀️ Author
 Adwita Sharma
 📧 adwita0411@gmail.com
